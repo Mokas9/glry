@@ -1,15 +1,19 @@
 <div class="col s3">
-    <div class="card" appHover>
-        <div class="card-image">
-        <img src="{{user.image}}">
-        <span class="card-title" [ngClass]="{'marked': isMarked}">{{ user.name | uppercase }}</span>
-        </div>
-        <div class="card-content">
-        <p>{{user.geo}}</p><br>
-        <p>{{user.gender}}</p>
-        </div>
-        <div class="card-action">
-        <a class="waves-effect waves-light btn" (click)="onClick()">Mark</a>
-        </div>
+  <div class="card" appHover [ngClass]="{'marked': isMarked}">
+
+    <div class="card-image">
+      <img src="{{user.image}}">
+      <span class="card-title" >{{ user.name | uppercase }}</span>
     </div>
+
+    <div class="card-content">
+      <p>{{user.geo}}</p><br>
+      <p>{{user.gender}}</p>
+    </div>
+
+    <div class="card-action">
+      <a class="waves-effect waves-light btn" (click)="onClick()">Mark</a>
+    </div>
+
+  </div>
 </div>

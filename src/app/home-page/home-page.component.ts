@@ -10,11 +10,23 @@ export class HomePageComponent implements OnInit {
 
   users = [];
   searchStr = '';
+  gender = 'all';
 
   constructor(private userService: UserService) { }
 
   ngOnInit() {
     this.userService.getUsers().subscribe(users =>  this.users = users);
+  }
+
+  genderChange(gender) {
+
+    if (gender === 'all') {
+      this.gender = 'all';
+
+    } else {
+      this.gender = gender;
+
+    }
   }
 
 }

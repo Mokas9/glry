@@ -8,19 +8,19 @@
   <form action="#">
     <p>
       <label>
-        <input class="with-gap" name="gender" type="radio" checked/>
+        <input class="with-gap" name="gender" type="radio" (click)="genderChange('all')" checked/>
         <span>All</span>
       </label>
     </p>
     <p>
       <label>
-        <input class="with-gap" name="gender" type="radio" />
+        <input class="with-gap" name="gender" type="radio" (click)="genderChange('male')"/>
         <span>Male</span>
       </label>
     </p>
     <p>
       <label>
-        <input class="with-gap" name="gender" type="radio"  />
+        <input class="with-gap" name="gender" type="radio" (click)="genderChange('female')"/>
         <span>Female</span>
       </label>
     </p>
@@ -29,7 +29,7 @@
 
 <div class="row">
   <app-user
-    *ngFor="let user of users | search:searchStr"
+    *ngFor="let user of users | search:searchStr | gender:gender"
     [user]="user"
   ></app-user>
 </div>

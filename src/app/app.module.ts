@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { HoverDirective } from './hover.directive';
 import { SearchPipe } from './search.pipe';
+import { GenderPipe } from './gender.pipe';
 import { HomePageComponent } from './home-page/home-page.component';
 import { SetupPageComponent } from './setup-page/setup-page.component';
 
@@ -21,6 +22,7 @@ const routes = [
     UserComponent,
     HoverDirective,
     SearchPipe,
+    GenderPipe,
     HomePageComponent,
     SetupPageComponent
   ],

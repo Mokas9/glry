@@ -1,0 +1,35 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="row">
+  <div class="input-field col s6">
+    <input id="first_name" class="validate" [(ngModel)]="searchStr" placeholder="Enter your name">
+    <label class="active" for="first_name">Search by name</label>
+  </div>
+
+  <form action="#">
+    <p>
+      <label>
+        <input class="with-gap" name="gender" type="radio" checked/>
+        <span>All</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input class="with-gap" name="gender" type="radio" />
+        <span>Male</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input class="with-gap" name="gender" type="radio"  />
+        <span>Female</span>
+      </label>
+    </p>
+  </form>
+</div>
+
+<div class="row">
+  <app-user
+    *ngFor="let user of users | search:searchStr"
+    [user]="user"
+  ></app-user>
+</div>
